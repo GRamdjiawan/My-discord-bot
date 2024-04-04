@@ -1,11 +1,11 @@
 import discord
+from discord.ext import commands
 import pytz
 import asyncio
 import datetime
-import settings
-import random_topic
-from Clear_cache import Clear_cache
-from discord.ext import commands
+from my_lib import settings
+from my_lib import random_topic
+from my_lib import Clear_cache
 
 def run():
     amsterdam_timezone = pytz.timezone('Europe/Amsterdam')
@@ -62,5 +62,5 @@ def run():
     bot.run(settings.DISCORD_API_SECRET)
 
 if __name__ == "__main__":
-    Clear_cache()
+    Clear_cache.Clear_cache()
     run()
